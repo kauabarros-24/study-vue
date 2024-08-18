@@ -1,24 +1,8 @@
 <script setup>
-import { ref, onMounted } from 'vue';
-
-const contador = ref(0);
-
-const incrementarContador = () => contador.value++
-const decrementarContador = () => contador.value > 0 ? contador.value-- : contador.value
-
-
-
+const rawHtml = '<span style="color: red">Este é um texto em vermelho</span>'
 </script>
 
 <template>
-  <button @click="incrementarContador">Incrementar</button>
-  <button @click="decrementarContador">Decrementar</button>
-  <p> {{ contador }}</p>
-
+  <p>Usando a interpolação de texto: {{ rawHtml }}</p>
+  <p>Usando a diretiva v-html: <span v-html="rawHtml"></span></p>
 </template>
-
-<style scoped>
-button {
-  font-weight: bold;
-}
-</style>
