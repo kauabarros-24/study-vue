@@ -45,7 +45,7 @@ function zerar() {
     <button @click="decrementarContador">Decrementar</button>
     <button @click="zerar">Zerar</button>
     <hr>
-    <p> {{ contador }} </p>
+    <p> Contador: {{ contador }} </p>
     <hr>
     <div class="maior" v-if="contador >= 10"><p>O valor do contador é maior que 10</p></div>
     <div class="menor" v-else><p>O valor do contador é menor que 10</p></div>
@@ -77,5 +77,9 @@ button {
 }
 .menor {
   color: red;
+}
+p {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 </style>
