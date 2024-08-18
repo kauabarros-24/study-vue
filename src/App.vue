@@ -1,8 +1,12 @@
 <script setup>
-const rawHtml = '<span style="color: red">Este é um texto em vermelho</span>'
+const mensagem = 'Kauã'
+
+function inverter(texto) {
+  return texto.split('').reverse().join('')
+}
+
 </script>
 
 <template>
-  <p>Usando a interpolação de texto: {{ rawHtml }}</p>
-  <p>Usando a diretiva v-html: <span v-html="rawHtml"></span></p>
+  <p> {{ inverter(mensagem) }}</p>
 </template>
