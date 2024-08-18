@@ -1,12 +1,6 @@
 <script setup>
-const mensagem = 'Kauã'
 
-function inverter(texto) {
-  return texto.split('').reverse().join('')
+function mostrarAlerta() {
+  alert('Kauã!')
 }
-
 </script>
-
-<template>
-  <p> {{ inverter(mensagem) }}</p>
-</template>
