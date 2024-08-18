@@ -1,36 +1,24 @@
-<script>
-  export default {
-    data() {
-      return {
-        contador: 0
-      }
-    },
-    methods: {
-      incrementarContador() {
-        this.contador++
-      },
-      decrementarContador() {
-        if (this.contador > 0) {
-          this.contador--
-        }
-      },
-      mounted() {
-        console.log(`O valor do contador é ${this.contador}`)
-      }
-    }
-  }
+<script setup>
+import { ref, onMounted } from 'vue';
+
+const contador = ref(0);
+
+const incrementarContador = () => contador.value++
+const decrementarContador = () => contador.value > 0 ? contador.value-- : contador.value
+
+
 
 </script>
 
-  <template>
-    <button @click="incrementarContador">Incrementar</button> 
-    <button @click="decrementarContador">Decrementar</button>
-    <p>Valor do contador: {{ contador }}</p>
-  </template>
+<template>
+  <button @click="incrementarContador">Incrementar</button>
+  <button @click="decrementarContador">Decrementar</button>
+  <p> {{ contador }}</p>
 
-  <style scoped>
-  button {
-    font-weight: bold;
-  }
+</template>
 
-  </style>
+<style scoped>
+button {
+  font-weight: bold;
+}
+</style>
